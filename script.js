@@ -2,12 +2,12 @@ let form = document.getElementById('bmi-form');
 let weightInput = document.getElementById('weight-input');
 let heightInput = document.getElementById('height-input');
 let ageInput = document.getElementById('age-input');
-let genderSelect = document.getElementById('gender-select'); 
+let genderSelect = document.getElementById('gender-select');
 let calculateBtn = document.getElementById('calculate-btn');
 const bmiResult = document.getElementById('bmi-result');
 const bmiStatus = document.getElementById('bmi-status');
 const ageResult = document.getElementById('age-result'); 
-const genderResult = document.getElementById('gender-result'); 
+const genderResult = document.getElementById('gender-result');
 
 form.addEventListener("submit", function(item) {
     item.preventDefault();
@@ -15,17 +15,17 @@ form.addEventListener("submit", function(item) {
     const weight = parseFloat(weightInput.value);
     const height = parseFloat(heightInput.value) / 100;
     const age = parseInt(ageInput.value);
-    const gender = genderSelect.value;
+    const gender = genderSelect.value; 
 
-    if (weight === 0 || height === 0 || age === 0 || gender === '') { 
+    if (weight === 0 || height === 0 || age === 0 || gender === '') {
         alert("Input tidak valid, silakan isi kembali");
         return;
     }
 
     const bmi = weight / (height * height);
     bmiResult.textContent = bmi.toFixed(2);
-    ageResult.textContent = age; 
-    genderResult.textContent = gender;
+    ageResult.textContent = age;
+    genderResult.textContent = gender === 'male' ? 'Laki-Laki' : 'Perempuan';
 
 	if (bmi < 18.5) {
 		bmiStatus.textContent = 'Underweight';

@@ -189,7 +189,7 @@ input[type="reset"]:hover {
 #bmi-form div {
     margin-top: 10px;
     color: rgb(156, 153, 153);
-    margin-top: 10px;
+    margin-bottom:  20px;
 }
 
 #bmi-form div label {
@@ -205,3 +205,5 @@ input[type="reset"]:hover {
     font-weight: normal;
     margin-bottom: 20px;
 }
+
+
